@@ -10,14 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: publish
-          fetch-depth: 0
-      - name: Update the publish branch
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          git merge --no-edit origin/main
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
@@ -29,6 +21,3 @@ jobs:
         with:
           commit_message: Update webpack assets
           file_pattern: docs/assets/*.css docs/assets/*.js
-          add_options: '-f'
-          skip_dirty_check: true
-          skip_fetch: true
