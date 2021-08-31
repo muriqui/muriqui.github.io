@@ -14,7 +14,10 @@ jobs:
           ref: publish
           fetch-depth: 0
       - name: Update the publish branch
-        run: git merge --no-edit origin/main
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git merge --no-edit origin/main
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
