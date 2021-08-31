@@ -1,8 +1,8 @@
 .idea/
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-assets/
+docs/.jekyll-cache
+docs/.jekyll-metadata
+docs/.sass-cache
+docs/_site/
+docs/assets/
+docs/vendor/
 node_modules/
-vendor

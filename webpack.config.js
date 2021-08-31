@@ -56,7 +56,7 @@ module.exports = {
     })
   ],
   output: {
-    path: path.resolve(__dirname, 'assets'),
+    path: path.resolve(__dirname, 'docs/assets'),
     filename: 'bundle.js',
     clean: true
   }
