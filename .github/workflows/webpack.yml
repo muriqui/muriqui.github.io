@@ -13,7 +13,9 @@ jobs:
         with:
           ref: publish
       - name: Update the publish branch
-        run: git merge --no-edit main
+        run: |
+          git fetch
+          git merge --no-edit origin/main
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
