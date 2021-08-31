@@ -12,10 +12,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: publish
+          fetch-depth: 0
       - name: Update the publish branch
-        run: |
-          git fetch
-          git merge --no-edit origin/main
+        run: git merge --no-edit origin/main
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
