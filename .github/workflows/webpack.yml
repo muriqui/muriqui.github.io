@@ -28,3 +28,5 @@ jobs:
           commit_message: Update webpack assets
           file_pattern: docs/assets/*.css docs/assets/*.js
           add_options: '-f'
+          skip_dirty_check: true
+          skip_fetch: true
