@@ -14,6 +14,8 @@
   },
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.js",
-    "jekyll": "cd docs && bundle exec jekyll serve --livereload"
+    "jekyll": "cd docs && bundle exec jekyll serve --livereload",
+    "start": "npm run build && npm run jekyll",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
