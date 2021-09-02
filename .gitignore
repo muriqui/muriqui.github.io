@@ -3,5 +3,6 @@ docs/.jekyll-cache
 docs/.jekyll-metadata
 docs/.sass-cache
 docs/_site/
+docs/assets/js/css.js
 docs/vendor/
 node_modules/

@@ -1,9 +1,24 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   {%- seo -%}
-  <link rel="stylesheet" href="{{ '/assets/style.min.css' | relative_url }}">
+
+  <script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
+
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="icon" href="{{ '/icon-192.png' | relative_url }}" type="image/png">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafafa">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#050505">
+
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}

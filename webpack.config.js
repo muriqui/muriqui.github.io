@@ -3,24 +3,23 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: () => {
-    const entries = {};
-    entries.style = path.resolve(__dirname, 'src/index.js');
-    return entries;
+  entry: {
+    css: path.resolve(__dirname, 'src', 'css.js'),
+    script: path.resolve(__dirname, 'src', 'script.js'),
   },
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
+              importLoaders: 1,
             }
           },
-          'postcss-loader'
+          'postcss-loader',
         ]
       }
     ]
@@ -31,7 +30,7 @@ module.exports = {
       new CssMinimizerPlugin({
         minimizerOptions: {
           preset: [
-            "default",
+            'default',
             {
               discardComments: { removeAll: true },
             },
@@ -42,9 +41,15 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         style: {
-          name: "style",
-          type: "css/mini-extract",
-          chunks: "all",
+          name: 'style',
+          test: /style\.css$/,
+          chunks: 'all',
+          enforce: true,
+        },
+        print: {
+          name: 'print',
+          test: /print\.css$/,
+          chunks: 'all',
           enforce: true,
         },
       },
@@ -52,12 +57,12 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].min.css",
+      filename: ({ chunk }) => `css/${chunk.name.replace('/js/', '/css/')}.css`,
     })
   ],
   output: {
-    path: path.resolve(__dirname, 'docs/assets'),
-    filename: 'bundle.js',
-    clean: true
+    path: path.resolve(__dirname, 'docs', 'assets'),
+    filename: 'js/[name].js',
+    clean: true,
   }
 };
