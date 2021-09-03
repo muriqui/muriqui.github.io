@@ -27,6 +27,9 @@ domain: muriqui.net
 url: https://muriqui.net # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: G-T4697GM12G
 
+collections:
+  - experience
+
 # Build settings
 #theme: minima
 plugins:

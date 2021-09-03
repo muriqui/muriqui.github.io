@@ -4,3 +4,11 @@ title: Resume
 ---
 <h1>Resume</h1>
 <p>My resume will go here.</p>
+
+<h2>Experience</h2>
+{% for experience in site.experience %}
+  <h3>{{ experience.title }}</h3>
+  <p>{{ experience.company }}, {{ experience.location }}</p>
+  <p>{{ experience.date | date: "%B %Y" }}—{{ experience.end }}</p>
+  <p>{{ experience.content | markdownify }}</p>
+{% endfor %}
