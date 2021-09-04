@@ -2,9 +2,12 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.3",
+    "browser-sync": "^2.27.5",
+    "concurrently": "^6.2.1",
     "css-loader": "^6.2.0",
     "css-minimizer-webpack-plugin": "^3.0.2",
     "mini-css-extract-plugin": "^2.2.0",
+    "npm-watch": "^0.11.0",
     "postcss": "^8.3.6",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
@@ -13,9 +16,25 @@
     "webpack-cli": "^4.8.0"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack --config webpack.config.js",
-    "jekyll": "cd docs && bundle exec jekyll serve --livereload",
-    "start": "npm run build && npm run jekyll",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:jekyll": "cd docs && bundle exec jekyll build",
+    "build": "npm run build:webpack && npm run build:jekyll",
+    "start": "concurrently 'npm run watch' 'browser-sync start --config browsersync.config.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "docs",
+        "src"
+      ],
+      "extensions": "html,md,css,js,yml",
+      "ignore": [
+        "docs/_site",
+        "docs/assets",
+        "docs/vendor"
+      ]
+    }
   }
 }
