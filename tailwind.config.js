@@ -4,7 +4,7 @@ module.exports = {
     './docs/_layouts/*.html',
     './docs/*.html',
   ],
-  darkMode: false,
+  darkMode: 'media',
   theme: {
     extend: {},
   },
