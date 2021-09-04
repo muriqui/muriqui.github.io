@@ -1,8 +1,7 @@
 module.exports = {
   purge: [
-    './docs/_includes/**/*.html',
-    './docs/_layouts/**/*.html',
-    './docs/_posts/*.md',
+    './docs/_includes/*.html',
+    './docs/_layouts/*.html',
     './docs/*.html',
   ],
   darkMode: false,
