@@ -1,8 +1,20 @@
-<header>
-  <nav>
-    <a href="{{ '/' | relative_url }}" aria-label="Go to homepage">{{ site.title | escape }}</a>
-    {%- for item in site.data.navigation -%}
-      <a href="{{ item.link | relative_url }}">{{ item.name | escape }}</a>
-    {%- endfor -%}
+<div class="w-9/10 max-w-5xl mx-auto py-2 sm:py-5 flex items-center justify-between">
+  <header class="font-bold text-lg">
+    <a class="text-gradient-brand whitespace-nowrap" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+  </header>
+  <button type="button" class="relative left-3 z-50 p-2 text-lime-600 dark:text-emerald-500 focus:outline-none transition-colors sm:hidden" id="menu-button" aria-controls="menu" aria-expanded="false">
+    <span class="sr-only">Open the menu</span>
+    <svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path class="top transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,6 h16" />
+      <path class="middle transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,12 h16" />
+      <path class="bottom transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,18 h16" />
+    </svg>
+  </button>
+  <nav class="fixed top-0 left-0 sm:relative w-full h-0 sm:h-auto bg-gradient-brand sm:bg-none opacity-0 sm:opacity-100 invisible sm:visible overflow-hidden sm:overflow-auto transition-all duration-300" id="menu">
+    <ul class="flex flex-col sm:flex-row justify-evenly sm:justify-end sm:space-x-8 h-full sm:h-auto py-16 sm:py-0 mx-auto sm:mx-0 text-white sm:text-current text-4xl sm:text-base text-center font-bold sm:font-normal">
+      {%- for item in site.data.navigation -%}
+        <li class="relative block opacity-0 sm:opacity-100"><a class="transition-colors sm:hover:text-lime-600" href="{{ item.link | relative_url }}">{{ item.name | escape }}</a></li>
+      {%- endfor -%}
+    </ul>
   </nav>
-</header>
+</div>

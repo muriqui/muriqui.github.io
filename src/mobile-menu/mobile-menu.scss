@@ -1,0 +1,32 @@
+#menu {
+  &.js-open {
+    opacity: 90%;
+    visibility: visible;
+    height: 100%;
+
+    li {
+      animation: fadeInRight .5s ease forwards;
+      animation-delay: .25s;
+      &:nth-of-type(2) {
+        animation-delay: .3s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .35s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .4s;
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}

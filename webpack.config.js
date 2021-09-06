@@ -5,25 +5,40 @@ const path = require('path');
 module.exports = {
   mode: 'production',
   entry: {
-    css: path.resolve(__dirname, 'src', 'css.js'),
-    script: path.resolve(__dirname, 'src', 'script.js'),
+    script: path.resolve(__dirname, 'src', 'index.js'),
   },
+  output: {
+    path: path.resolve(__dirname, 'docs', 'assets'),
+    filename: 'js/[name].js',
+    clean: true,
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+    }),
+  ],
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            }
-          },
+          'css-loader',
           'postcss-loader',
-        ]
-      }
-    ]
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
   },
   optimization: {
     minimizer: [
@@ -42,28 +57,20 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         styles: {
-          name: 'styles',
-          test: /styles\.css$/,
-          chunks: 'all',
-          enforce: true,
-        },
-        print: {
-          name: 'print',
-          test: /print\.css$/,
+          name(module, chunks, cacheGroupKey) {
+            const moduleFileName = module
+              .identifier()
+              .split('/')
+              .reduceRight((item) => item)
+              .split('.')
+              .reduce((item) => item);
+            return moduleFileName === 'print' ? moduleFileName : cacheGroupKey;
+          },
+          type: 'css/mini-extract',
           chunks: 'all',
           enforce: true,
         },
       },
-    }
+    },
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: ({ chunk }) => `css/${chunk.name.replace('/js/', '/css/')}.css`,
-    })
-  ],
-  output: {
-    path: path.resolve(__dirname, 'docs', 'assets'),
-    filename: 'js/[name].js',
-    clean: true,
-  }
 };

@@ -4,5 +4,6 @@ module.exports = {
       'docs/_site/assets/css/*.css',
       'docs/_site/assets/js/*.js',
     ],
+    notify: false,
     server: 'docs/_site',
 };

@@ -1,7 +1,10 @@
 {
   "devDependencies": {
+    "@babel/core": "^7.15.4",
+    "@babel/preset-env": "^7.15.4",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.3.3",
+    "babel-loader": "^8.2.2",
     "browser-sync": "^2.27.5",
     "concurrently": "^6.2.1",
     "css-loader": "^6.2.0",
@@ -11,6 +14,8 @@
     "postcss": "^8.3.6",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
+    "sass": "^1.39.0",
+    "sass-loader": "^12.1.0",
     "tailwindcss": "^2.2.9",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0"
@@ -29,7 +34,7 @@
         "docs",
         "src"
       ],
-      "extensions": "html,md,css,js,yml",
+      "extensions": "html,md,css,scss,js,yml",
       "ignore": [
         "docs/_site",
         "docs/assets",
