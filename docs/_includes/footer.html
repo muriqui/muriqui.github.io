@@ -1,8 +1,11 @@
-<footer class="w-9/10 max-w-5xl mx-auto">
+<footer class="w-9/10 max-w-5xl mx-auto mt-5 border-t py-5 sm:flex sm:justify-between text-sm">
   <p>&copy; 2021 <a rel="author" href="{{ '/' | relative_url }}" aria-label="{{ site.author | escape }}'s website">{{ site.author | escape }}</a></p>
-  <ul>
-    {%- for item in site.data.footer -%}
-      <li><a href="{{ item.link | relative_url }}" rel="noopener nofollow">{{ item.name | escape }}</a></li>
-    {%- endfor -%}
-  </ul>
+  <div>
+    <h2 class="sr-only">Social</h2>
+    <ul class="space-x-4">
+      {%- for item in site.data.social -%}
+        <li class="inline-block"><a class="underline hover:no-underline" href="{{ item.link }}" rel="noopener nofollow">{{ item.name | escape }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
 </footer>
