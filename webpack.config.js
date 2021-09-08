@@ -8,13 +8,13 @@ module.exports = {
     script: path.resolve(__dirname, 'src', 'index.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'docs', 'assets'),
-    filename: 'js/[name].js',
+    path: path.resolve(__dirname, 'docs', 'assets', 'js'),
+    filename: '[name].js',
     clean: true,
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: '../css/[name].css',
     }),
   ],
   module: {

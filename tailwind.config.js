@@ -19,6 +19,13 @@ module.exports = {
       emerald: colors.emerald,
     },
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.current'),
+          },
+        },
+      }),
       width: {
         '9/10': '90%',
       },

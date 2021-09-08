@@ -22,7 +22,7 @@ title: Dan Lobelle
 short_title: Dan L.
 author: Dan Lobelle
 description: >- # this means to ignore newlines until "baseurl:"
-  Web technology expert and team leader
+  I make websites do cool stuff.
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: muriqui.net
 url: https://muriqui.net # the base hostname & protocol for your site, e.g. http://example.com

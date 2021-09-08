@@ -1,8 +1,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.layout != 'home' %}{{ page.title | escape }} | {% endif %}{{ site.title }}</title>
 
-  {%- seo -%}
+  {%- seo title=false -%}
 
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
