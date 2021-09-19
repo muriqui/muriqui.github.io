@@ -1,20 +1,22 @@
-<div class="w-9/10 max-w-5xl mx-auto py-3 flex items-center justify-between">
-  <header class="font-bold text-lg sm:py-3">
-    <a class="text-gradient-brand whitespace-nowrap" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
-  </header>
-  <button type="button" class="relative left-3 z-50 p-2 text-lime-600 dark:text-emerald-500 focus:outline-none transition-colors sm:hidden" id="menu-button" aria-controls="menu" aria-expanded="false">
-    <span class="sr-only">Open the menu</span>
-    <svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-      <path class="top transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,6 h16" />
-      <path class="middle transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,12 h16" />
-      <path class="bottom transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,18 h16" />
-    </svg>
-  </button>
-  <nav class="fixed top-0 left-0 sm:relative w-full h-0 sm:h-auto bg-gradient-brand sm:bg-none opacity-0 sm:opacity-100 invisible sm:visible overflow-hidden sm:overflow-auto transition-all duration-300" id="menu">
-    <ul class="flex flex-col sm:flex-row justify-evenly sm:justify-end sm:space-x-8 h-full sm:h-auto py-16 sm:py-0 mx-auto sm:mx-0 text-white sm:text-current text-4xl sm:text-base text-center font-bold sm:font-normal">
-      {%- for item in site.data.navigation -%}
-        <li class="relative block opacity-0 sm:opacity-100"><a class="inline-block transition-all sm:py-1.5 {% if item.link == page.url %}sm:border-b-2 sm:border-lime-600{% else %}sm:hover:text-lime-600 sm:hover:border-b-2{% endif %}" href="{{ item.link | relative_url }}">{{ item.name | escape }}</a></li>
-      {%- endfor -%}
-    </ul>
-  </nav>
+<div class="bg-gray-50 dark:bg-black">
+  <div class="flex items-center justify-between w-full px-[5vw] py-3 max-w-screen-xl mx-auto xl:px-[58px]">
+    <header class="font-headline font-black text-lg sm:py-3">
+      <a class="text-black dark:text-white whitespace-nowrap" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+    </header>
+    <button type="button" class="relative left-3 z-50 p-2 text-lime-700 dark:text-lime-600 focus:outline-none transition-colors sm:hidden" id="menu-button" aria-controls="menu" aria-expanded="false">
+      <span class="sr-only">Open the menu</span>
+      <svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path class="top transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,6 h16" />
+        <path class="middle transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,12 h16" />
+        <path class="bottom transition-all duration-300" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,18 h16" />
+      </svg>
+    </button>
+    <nav class="fixed z-40 top-0 left-0 sm:relative w-full h-0 sm:h-auto bg-gradient-brand sm:bg-none opacity-0 sm:opacity-100 invisible sm:visible overflow-hidden sm:overflow-auto transition-all duration-300" id="menu">
+      <ul class="flex flex-col sm:flex-row justify-evenly sm:justify-end sm:space-x-8 h-full sm:h-auto py-16 sm:py-0 mx-auto sm:mx-0 text-white sm:text-current text-4xl sm:text-base text-center font-headline sm:font-body font-black sm:font-medium">
+        {%- for item in site.data.navigation -%}
+          <li class="relative block opacity-0 sm:opacity-100"><a class="inline-block transition-all sm:py-1.5 {% if item.link == page.url %}sm:border-b-2 sm:border-lime-600{% else %}sm:hover:text-black dark:sm:hover:text-white sm:hover:border-b-2{% endif %}" href="{{ item.link | relative_url }}">{{ item.name | escape }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
 </div>

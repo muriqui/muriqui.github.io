@@ -1,14 +1,21 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="w-full mx-auto prose sm:prose-lg md:prose-xl lg:prose-wide xl:prose-max dark:prose-dark">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
+  <header class="pt-6 pb-8 sm:py-12">
+    <h1>{{ page.title | escape }}</h1>
+    {%- if page.excerpt -%}
+      <p class="lead">{{ page.excerpt | escape }}</p>
+    {%- endif -%}
   </header>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+  {%- if page.image -%}
+    <figure class="hero">
+      <img src="{{ page.image.path | relative_url }}" alt="{{ page.image.alt }}" />
+    </figure>
+  {%- endif -%}
+
+  {{ content }}
 
 </article>

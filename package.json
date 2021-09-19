@@ -32,7 +32,8 @@
     "build": {
       "patterns": [
         "docs",
-        "src"
+        "src",
+        "./*.config.js"
       ],
       "extensions": "html,md,css,scss,js,yml",
       "ignore": [

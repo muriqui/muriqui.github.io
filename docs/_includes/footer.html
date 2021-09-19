@@ -1,11 +1,13 @@
-<footer class="w-9/10 max-w-5xl mx-auto mt-6 border-t py-6 sm:flex sm:justify-between text-sm">
-  <p>&copy; 2021 <a rel="author" href="{{ '/' | relative_url }}" aria-label="{{ site.author | escape }}'s website">{{ site.author | escape }}</a></p>
-  <div>
-    <h2 class="sr-only">Social</h2>
-    <ul class="space-x-4">
-      {%- for item in site.data.social -%}
-        <li class="inline-block"><a class="underline hover:no-underline" href="{{ item.link }}" rel="noopener nofollow">{{ item.name | escape }}</a></li>
-      {%- endfor -%}
-    </ul>
-  </div>
-</footer>
+<div class="px-[5vw] max-w-screen-xl mx-auto xl:px-[58px]">
+  <footer class="flex flex-col sm:flex-row items-center sm:justify-between text-sm w-full mt-6 border-t dark:border-gray-700 pt-6">
+    <p class="mb-6">&copy; 2021 <a class="transition-colors hover:text-lime-700 dark:hover:text-lime-500" rel="author" href="{{ '/' | relative_url }}" aria-label="{{ site.author | escape }}'s website">{{ site.author | escape }}</a></p>
+    <div class="mb-6">
+      <h2 class="sr-only">Social</h2>
+      <ul class="space-x-4">
+        {%- for item in site.data.social -%}
+          <li class="inline-block before:content-['\b7'] before:relative before:right-2 first:before:content-['']"><a class="transition-colors hover:text-lime-700 dark:hover:text-lime-500" href="{{ item.link }}" rel="noopener nofollow">{{ item.name | escape }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </footer>
+</div>

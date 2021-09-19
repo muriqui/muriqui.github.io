@@ -1,0 +1,8 @@
+{%- if include.caption -%}
+<figure>
+{%- endif -%}
+  <img src="{{ include.path | relative_url }}" alt="{{ include.alt | escape }}" />
+{%- if include.caption -%}
+  <figcaption>{{ include.caption | escape }}</figcaption>
+</figure>
+{%- endif -%}
