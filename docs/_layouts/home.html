@@ -1,20 +1,23 @@
 ---
 layout: default
 ---
-<div class="flex flex-col justify-center items-center">
-  {%- if page.image -%}
-    <img class="w-40 rounded-full my-4" src="{{ page.image.path | relative_url }}" alt="{{ page.image.alt }}" />
-  {%- endif -%}
-  <div class="text-center mb-8">
-    {%- if page.title -%}
-      <h1 class="text-4xl font-bold">{{ page.title | escape }}</h1>
+<div class="px-[5vw] sm:px-[10vw] md:px-[15vw] bg-gray-50 dark:bg-black">
+  <div class="flex flex-col justify-center items-center text-center text-lg md:text-xl max-w-prose mx-auto mb-8">
+    {%- if page.image -%}
+      <img class="w-44 rounded-full my-8" src="{{ page.image.path | relative_url }}" alt="{{ page.image.alt }}" />
     {%- endif -%}
-    {%- if site.description -%}
-      <p class="text-lg font-light">{{ site.description }}</p>
-    {%- endif -%}
-  </div>
 
-  <div class="prose">
+    {%- if page.title -%}
+      <h1 class="bg-clip-text bg-gradient-to-br from-emerald-700 to-lime-600 dark:from-lime-300 dark:to-emerald-500 text-transparent inline-block font-headline text-4xl sm:text-6xl font-black">{{ page.title | escape }}</h1>
+    {%- endif -%}
+
+    <p class="text-xl sm:text-4xl sm:mt-4">I make websites do <em class="font-semibold text-gray-900 dark:text-gray-50">cool stuff</em>.</p>
+
+    <p class="my-8">I'm a full stack engineer and the director of digital strategy at <a class="body-link" href="https://wmich.edu/">Western&nbsp;Michigan&nbsp;University</a>.</p>
+  </div>
+</div>
+<div class="px-[5vw] sm:px-[10vw] md:px-[15vw]">
+  <div class="w-full mx-auto prose prose-lg md:prose-xl lg:prose-wide xl:prose-max dark:prose-dark">
     {{ content }}
   </div>
 </div>
