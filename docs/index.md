@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Hi! I'm Dan.
+title: Hi, I'm Dan.
 image:
   path: /assets/images/me.jpg
   alt: Dan Lobelle
