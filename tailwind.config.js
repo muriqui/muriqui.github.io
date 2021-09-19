@@ -62,7 +62,7 @@ module.exports = {
               fontFamily: theme('fontFamily.headline').join(),
               fontSize: '2.25rem',
               fontWeight: '900',
-              lineHeight: '2.5rem',
+              lineHeight: '1.375',
               marginBottom: '1rem',
             },
             h2: {
@@ -100,7 +100,7 @@ module.exports = {
             },
             h1: {
               fontSize: '3.75rem',
-              lineHeight: '1',
+              lineHeight: '1.375',
               marginBottom: '1rem',
             },
             '[class~="hero"]': {
@@ -116,7 +116,7 @@ module.exports = {
             },
             h1: {
               fontSize: '3.75rem',
-              lineHeight: '1',
+              lineHeight: '1.375',
               marginBottom: '1rem',
             },
             '[class~="hero"]': {
