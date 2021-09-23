@@ -1,21 +1,23 @@
 ---
 layout: default
 ---
-<article class="w-full mx-auto prose sm:prose-lg md:prose-xl lg:prose-wide xl:prose-max dark:prose-dark">
+<div class="px-[5vw] sm:px-[10vw] md:px-[15vw]">
+  <article class="w-full mx-auto prose sm:prose-lg md:prose-xl lg:prose-wide xl:prose-max dark:prose-dark">
 
-  <header class="pt-6 pb-8 sm:py-12 text-center">
-    <h1>{{ page.title | escape }}</h1>
-    {%- if page.excerpt -%}
-      <p class="lead">{{ page.excerpt | escape }}</p>
+    <header class="pt-6 pb-8 sm:py-12 text-center">
+      <h1>{{ page.title | escape }}</h1>
+      {%- if page.excerpt -%}
+        <p class="lead">{{ page.excerpt | escape }}</p>
+      {%- endif -%}
+    </header>
+
+    {%- if page.image -%}
+      <figure class="hero">
+        <img src="{{ page.image.path | relative_url }}" alt="{{ page.image.alt }}" />
+      </figure>
     {%- endif -%}
-  </header>
 
-  {%- if page.image -%}
-    <figure class="hero">
-      <img src="{{ page.image.path | relative_url }}" alt="{{ page.image.alt }}" />
-    </figure>
-  {%- endif -%}
+    {{ content }}
 
-  {{ content }}
-
-</article>
+  </article>
+</div>
