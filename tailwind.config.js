@@ -92,6 +92,17 @@ module.exports = {
             },
           },
         },
+        sm: {
+          css: {
+            '[class~="lead"]': {
+              marginTop: '0',
+              marginBottom: '0',
+            },
+            '[class~="hero"]': {
+              margin: '0 -10vw 2rem',
+            },
+          },
+        },
         lg: {
           css: {
             '[class~="lead"]': {

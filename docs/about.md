@@ -4,7 +4,7 @@ title: Hello there.
 excerpt: I'm Dan, a full stack web developer and DevOps engineer based in Portage, Michigan.
 ---
 
-I started coding in the third grade and have been tinkering with computers all my life. After college, I spent eight years as a network engineer while also building websites as a side gig. Then I realized that I enjoyed my web work way more than my day job, so I made that my day job.
+I started coding in the third grade and have been tinkering with computers all my life. After college, I spent seven years as a network engineer while also building websites as a side gig. Then I realized that I enjoyed my web work way more than my day job, so I made that my day job.
 
 ## Work
 
