@@ -14,7 +14,7 @@
   }
 
   .text-gradient-brand {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-emerald-700 to-lime-600 dark:from-lime-300 dark:to-emerald-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-emerald-700 to-lime-600 dark:from-lime-300 dark:to-emerald-500 print:text-lime-700;
   }
 
   .body-link {

@@ -31,6 +31,7 @@ module.exports = {
       },
       screens: {
         'xl': '1154px',
+        'print': {'raw': 'print'},
       },
       typography: (theme) => ({
         DEFAULT: {

@@ -1,1 +1,56 @@
-body { color: black; }
+@use "sass:math";
+
+.body-link {
+  color: black;
+  box-shadow: none;
+}
+
+.prose {
+  color: black;
+
+  h1 {
+    color: theme('colors.lime.700');
+  }
+
+  [class~="lead"],
+  a,
+  em,
+  strong,
+  ol > li::before,
+  blockquote,
+  h2, h3, h4, h5, h6,
+  figure figcaption,
+  code,
+  a code,
+  thead {
+    color: black;
+  }
+
+  a {
+    box-shadow: none;
+  }
+
+  ul {
+    padding-left: 1.75em;
+    & > li {
+      &::before {
+        background-color: transparent;
+      }
+      padding-left: 0;
+      list-style: disc;
+    }
+  }
+}
+
+.prose-sm {
+  ul { padding-left: math.div(22em, 14); }
+}
+
+.prose-lg,
+sm\:prose-lg {
+  ul { padding-left: math.div(30em, 18); }
+}
+
+.md\:prose-xl {
+  ul { padding-left: math.div(36em, 20); }
+}

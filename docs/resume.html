@@ -3,13 +3,13 @@ layout: default
 title: Resume
 description: Dan Lobelle is a senior full stack web developer based in Portage, MI.
 ---
-<article class="text-sm leading-6 sm:text-base text-gray-700 dark:text-gray-400 px-[5vw] max-w-screen-xl mx-auto xl:px-[58px] lg:grid lg:grid-cols-3 lg:grid-rows-[repeat(4,min-content),auto] lg:gap-12">
+<article class="text-sm leading-6 sm:text-base text-gray-700 dark:text-gray-400 print:text-black px-[5vw] max-w-screen-xl mx-auto xl:px-[58px] lg:grid lg:grid-cols-3 lg:grid-rows-[repeat(4,min-content),auto] lg:gap-12">
   <header class="my-6 sm:my-12 lg:col-start-1 lg:row-start-1 lg:mb-0">
     <h1 class="mb-2 font-headline font-black text-4xl sm:text-6xl lg:leading-tight text-gradient-brand">Dan Lobelle</h1>
-    <p class="mb-2 text-base sm:text-xl lg:leading-normal italic text-gray-900 dark:text-gray-50">Full Stack Web Developer and DevOps&nbsp;Engineer</p>
+    <p class="mb-2 text-base sm:text-xl lg:leading-normal italic text-gray-900 dark:text-gray-50 print:text-black">Full Stack Web Developer and DevOps&nbsp;Engineer</p>
 
     <h2 class="sr-only">Contact</h2>
-    <ul class="sm:space-x-4 lg:space-x-0 lg:leading-relaxed text-gray-500 dark:text-gray-400">
+    <ul class="sm:space-x-4 lg:space-x-0 lg:leading-relaxed text-gray-500 dark:text-gray-400 print:text-black">
       {% for contact in site.data.resume.contact %}
       <li class="sm:inline-block sm:before:content-['\b7'] sm:before:relative sm:before:right-2 sm:first:before:content-[''] lg:list-item lg:before:content-['']">
         {%- if contact.href -%}<a class="transition-colors hover:text-lime-700 dark:hover:text-lime-500" href="{{ contact.href }}">{%- endif -%}
@@ -24,7 +24,7 @@ description: Dan Lobelle is a senior full stack web developer based in Portage, 
     <h2 class="mb-2 font-headline font-black text-2xl text-gradient-brand">Skills</h2>
     {% for category in site.data.resume.skills %}
       <div class="mb-4 last:mb-0 md:flex lg:block">
-        <h3 class="mb-1 md:mb-0 md:w-28 lg:mb-1 lg:w-auto font-semibold lg:text-lg text-gray-900 dark:text-gray-50">{{ category.heading }}</h3>
+        <h3 class="mb-1 md:mb-0 md:w-28 lg:mb-1 lg:w-auto font-semibold lg:text-lg text-gray-900 dark:text-gray-50 print:text-black">{{ category.heading }}</h3>
         <ul class="lg:leading-relaxed">
           {% for skill in category.skills %}
             <li class="inline after:content-[','] last:after:content-['']">{{ skill }}</li>
@@ -39,18 +39,18 @@ description: Dan Lobelle is a senior full stack web developer based in Portage, 
     {% assign sortedExperience = site.experience | reverse %}
     {% for experience in sortedExperience %}
       <div class="mb-8 sm:mb-12">
-        <h3 class="mb-1 font-semibold text-base sm:text-lg text-gray-900 dark:text-gray-50">{{ experience.title }}</h3>
-        <p class="mb-1 text-sm leading-6 text-gray-500 dark:text-gray-400">{{ experience.employer }}<br class="md:hidden"><span class="hidden px-2 md:inline">|</span><time datetime="{{ experience.date | date: '%Y-%m' }}">{{ experience.date | date: '%b %Y' }}</time>–{% if experience.end %}<time datetime="{{ experience.end | date: '%Y-%m' }}">{{ experience.end | date: '%b %Y' }}</time>{% else %}present{% endif %}</p>
+        <h3 class="mb-1 font-semibold text-base sm:text-lg text-gray-900 dark:text-gray-50 print:text-black">{{ experience.title }}</h3>
+        <p class="mb-1 text-sm leading-6 text-gray-500 dark:text-gray-400 print:text-black">{{ experience.employer }}<br class="md:hidden"><span class="hidden px-2 md:inline">|</span><time datetime="{{ experience.date | date: '%Y-%m' }}">{{ experience.date | date: '%b %Y' }}</time>–{% if experience.end %}<time datetime="{{ experience.end | date: '%Y-%m' }}">{{ experience.end | date: '%b %Y' }}</time>{% else %}present{% endif %}</p>
         <div class="my-2 prose prose-sm dark:prose-dark">{{ experience.content | markdownify }}</div>
-        <p class="mt-3 italic text-sm leading-6"><strong class="font-bold text-gray-900 dark:text-gray-50">Technologies:</strong> {{ experience.technologies | join: ', ' }}</p>
+        <p class="mt-3 italic text-sm leading-6"><strong class="font-bold text-gray-900 dark:text-gray-50 print:text-black">Technologies:</strong> {{ experience.technologies | join: ', ' }}</p>
       </div>
     {% endfor %}
   </section>
 
   <section id="education" class="my-8 sm:my-12 lg:col-start-1 lg:row-start-3 lg:my-0">
     <h2 class="mb-2 font-headline font-black text-2xl text-gradient-brand">Education</h2>
-    <h3 class="mb-1 font-semibold text-base sm:text-lg text-gray-900 dark:text-gray-50">Bachelor of Science (Computer&nbsp;Science)</h3>
-    <p class="text-sm leading-6 lg:text-base lg:leading-relaxed text-gray-500 dark:text-gray-400">Western Michigan University<br class="md:hidden lg:inline"><span class="hidden px-2 md:inline lg:hidden">|</span><time datetime="2004-04">Apr 2004</time></p>
+    <h3 class="mb-1 font-semibold text-base sm:text-lg text-gray-900 dark:text-gray-50 print:text-black">Bachelor of Science (Computer&nbsp;Science)</h3>
+    <p class="text-sm leading-6 lg:text-base lg:leading-relaxed text-gray-500 dark:text-gray-400 print:text-black">Western Michigan University<br class="md:hidden lg:inline"><span class="hidden px-2 md:inline lg:hidden">|</span><time datetime="2004-04">Apr 2004</time></p>
   </section>
 
   <section id="hobbies" class="my-8 sm:my-12 lg:col-start-1 lg:row-start-4 lg:my-0">
