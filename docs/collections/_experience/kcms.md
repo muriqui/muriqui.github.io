@@ -11,7 +11,7 @@ technologies:
   - SAN/NAS
   - Drupal
 ---
-- System administrator of the electronic medical records, accounting, HR and web application servers for a multi-clinic residency program.
+- System administrator of the electronic medical records, accounting, HR, and web application servers for a multi-clinic residency program.
 - Designed and deployed a SAN/NAS platform with offsite disaster recovery.
 - Implemented a VMware cluster to improve uptime and reduce data center costs.
 - Built public and intranet websites, plus web-based tools to support IT operations.

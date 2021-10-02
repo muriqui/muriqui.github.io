@@ -13,6 +13,6 @@ technologies:
 ---
 - As head of digital strategy, lead web and SEO projects to increase enrollment.
 - Established a web accessibility training program to improve WCAG conformance.
-- Instituted Scrum, test-driven development and DevOps practices to achieve continuous delivery of website code with zero downtime.
+- Instituted Scrum, test-driven development, and DevOps practices to achieve continuous delivery of website code with zero downtime.
 - Built a component-based UI system to ensure continuity across web applications.
-- Currently converting the university's CMS to a cloud-hosted, headless Drupal platform with a React front-end.
+- Currently converting the university's CMS to a cloud-hosted, headless Drupal platform with a React front end.

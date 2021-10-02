@@ -9,6 +9,6 @@ technologies:
   - Citrix
   - Cisco
 ---
-- Lead IT operations for a multi-site cardiology practice with 45 providers.
+- Led IT operations for a multi-site cardiology practice with 45 providers.
 - Deployed NAS and virtualization to improve clinical application reliability.
 - Managed network integration projects following a merger with Spectrum Health.

@@ -10,4 +10,4 @@ technologies:
   - CSS
   - JavaScript
 ---
-- Built websites for various corporations, small businesses and non-profits.
+- Built websites for various corporations, small businesses, and non-profits.
