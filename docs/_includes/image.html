@@ -1,8 +1,8 @@
 {%- if include.caption -%}
 <figure>
 {%- endif -%}
-  <img src="{{ include.path | relative_url }}" alt="{{ include.alt | escape }}" />
+  <img src="{{ include.path | relative_url }}" alt="{{ include.alt | smartify }}" />
 {%- if include.caption -%}
-  <figcaption>{{ include.caption | escape }}</figcaption>
+  <figcaption>{{ include.caption | smartify }}</figcaption>
 </figure>
 {%- endif -%}

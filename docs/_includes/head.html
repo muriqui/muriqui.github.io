@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title and page.layout != 'home' %}{{ page.title | escape }} | {% endif %}{{ site.title }}</title>
+  <title>{% if page.title and page.layout != 'home' %}{{ page.title | smartify }} | {% endif %}{{ site.title }}</title>
 
   {%- seo title=false -%}
 
