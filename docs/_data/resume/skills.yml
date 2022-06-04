@@ -1,12 +1,11 @@
-- heading: Front-end
+- heading: Front end
   skills:
     - HTML
     - CSS/SCSS
     - JavaScript ES6
-    - Webpack
-    - component-based design
+    - React
 
-- heading: Back-end
+- heading: Back end
   skills:
     - Drupal
     - PHP
@@ -18,5 +17,4 @@
     - Git
     - CI/CD
     - Docker
-    - Bash scripting
     - test-driven development

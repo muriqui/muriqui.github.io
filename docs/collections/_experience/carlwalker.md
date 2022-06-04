@@ -8,7 +8,7 @@ technologies:
   - Linux
   - Cisco
   - NAS
-  - Drupal
+  - Drupal 6
 ---
 - Network administrator for a civil engineering firm with ten regional offices.
 - Consolidated IT assets to a central data center and a remote disaster recovery site.

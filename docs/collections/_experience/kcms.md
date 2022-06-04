@@ -9,7 +9,7 @@ technologies:
   - Linux
   - VMware
   - SAN/NAS
-  - Drupal
+  - Drupal 4.7/5/6
 ---
 - System administrator of the electronic medical records, accounting, HR, and web application servers for a multi-clinic residency program.
 - Designed and deployed a SAN/NAS platform with offsite disaster recovery.

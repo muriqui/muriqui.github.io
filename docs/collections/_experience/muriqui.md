@@ -4,7 +4,7 @@ employer: Freelance
 date: 2007-01-01
 end: 2013-04-12
 technologies:
-  - Drupal
+  - Drupal 5/6
   - PHP
   - HTML
   - CSS
